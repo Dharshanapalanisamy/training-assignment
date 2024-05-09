@@ -1,0 +1,156 @@
+#1
+n=int(input("Enter the number of elements:))
+for i in range (1,1+n)
+            b=int(input("Enter the number:))
+            a.append(b)
+print(a)
+odd=[]
+even=[]
+for j in a:
+    if (j%2==0):
+        even.append(j)
+    else:
+        odd.appemd(j) 
+print("Odd numbers",odd)
+print("Even numbers",even)
+
+  #2
+def find_max_min(n):
+  largest = n[0]
+  smallest = n[0]
+  for num in n:
+        if num > largest:
+            largest = num
+        elif num < smallest:
+            smallest = num
+        return largest, smallest
+n= [12, 45, 78, 23, 56, 89, 5]
+largest, smallest = find_max_min(n)
+print("Largest number:", largest)
+print("Smallest number:", smallest)
+
+
+#3
+def find_second_largest_smallest(numbers):
+    if len(numbers) < 2:
+        return "List must contain at least two elements"
+    numbers.sort()
+    return numbers[1], numbers[-2]
+numbers = [5, 2, 8, 1, 9, 3, 7, 4, 6]
+second_smallest, second_largest = find_second_largest_smallest(numbers)
+print("Second smallest number:", second_smallest)
+print("Second largest number:", second_largest)
+
+
+#4
+def ascend(n):
+    for i in range(len(n)):
+        for j in range(i + 1, len(n)):
+            if n[i] > n[j]:
+                n[i], n[j] = n[j], n[i]
+    return n
+def descend(n):
+    for i in range(len(n)):
+        for j in range(i + 1, len(n)):
+            if n[i] < n[j]:
+                n[i], n[j] = n[j], n[i]
+    return numbers
+n = [5, 2, 8, 1, 9, 3, 7, 4, 6]
+ascending = ascend(n.copy())
+print("Ascending order:", ascending)
+descending = descend(n.copy())
+print("Descending order:", descending)
+
+#5
+a=[]
+n=int(input("Enter the number of elements:"))
+for i in range(1,n+1):
+    b=int(input("Enter the number"))
+    a.append(b)
+print(a)
+number=int(input("enter the number"))
+index_position = a.index(number)
+print("Index position of", number, "is:", index_position)
+
+#6
+def mt(lst):
+    return max(set(lst), key=lst.count)
+my_list = [1, 2, 3, 4, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+print("Most frequent element:", mt(my_list))
+
+#7
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
+dict = {}
+for i in range(len(keys)):
+   dict.update({keys[i]: values[i]})
+print(dict)
+
+#8
+n=["mickie","minnie","donald","pluto","july","mani","mary"]
+k=[]
+r=[]
+d=[]
+no=[]
+for j in n:
+    a=int(input(f"Enter your vote {j}: press 1 for KHOLI press 2 for ROHIT,press 3 for DHONI,Press 4 for NOTA"))
+    if(a==1):
+        k.append(j)
+    elif(a==2):
+        r.append(j)
+    elif(a==3):
+        d.append(j)
+    elif(a==4):
+        no.append(j)
+    else:
+        print("Invalid choice")
+b=len(k)
+c=len(r)
+o=len(d)
+e=len(no)
+if(b>c and b>o and b>e):
+    print(f"Kholi is the winner with {b} voters")
+elif(c>b and c>o and c>e):
+    print(f"Rohit is the winner with {c} voters")
+elif(o>b and o>c and o>e):
+    print(f"Dhoni is the winner with {o} voters")
+else:
+    print(f"NOTA is the winner with {e} voters")
+
+  #9
+  def dollar(a):
+    print(a*83.49)
+def fahrenheit(a):
+    print((a*9/5)+32)
+def bms(a,b):
+    print(a/b)
+def si(a,b,c):
+  interest = (a*b*c)/100
+  print(interest)
+
+d=int(input("Enter indian rupees:"))
+e=dollar(d)
+print(e)
+s=int(input("Enter the celsius"))
+f=fahrenheit(s)
+print(f)
+p=int(input("Enter the weight:"))
+q=int(input("Enter the height"))
+r=bms(p,q)
+print(r)
+k=int(input("ENter the principle "))
+m=int(input("Enter the rate"))
+o=int(input("Enter the time"))
+y=si(k,m,o)
+print(y)
+
+#10
+def sort_zeros_and_ones(input_list):
+    zeros_count = input_list.count(0)
+    ones_count = len(input_list) - zeros_count
+
+    output_list = [0] * zeros_count + [1] * ones_count
+    return output_list
+input_list = [0, 1, 0, 1, 1, 0, 1, 0, 1, 0]
+output_list = sort_zeros_and_ones(input_list)
+print(output_list)
